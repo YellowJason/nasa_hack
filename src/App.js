@@ -39,7 +39,7 @@ const options = {
     legend: {position: 'top',},
   },
   elements: {
-    point: {radius: 1, pointStyle: 'circle'}
+    point: {radius: 0.5, pointStyle: 'circle'}
   }
 };
 //data of CO2
