@@ -119,16 +119,23 @@ function App() {
   const tempPlot = (<Line options={options} data={data2}/>);
   const seaPlot = (<Line options={options} data={data3}/>);
   const items = [
-    {label: `CO2`,key: 1},
+    {label: `Sea Level`,key: 1},
     {label: `Global Temperture`,key: 2},
-    {label: `Sea Level`,key: 3}
+    {label: `CO2 Concentration`,key: 3}
   ];
 
   return (
-    <div style={{width:'100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-      <div style={{ width:'50%', minWidth: '30rem', height: '40%', marginTop: "5rem",  align_self: 'center'}}>
+    <div style={{width:'100%', padding:'2rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: '#D0D0D0'}}>
+      <div style={{ width:'50%', minWidth: '30rem', marginTop: "2rem",  align_self: 'center', padding:'2rem', background: 'white', borderRadius: '2rem'}}>
+        <img src='./plot_data/loss_gain.gif' width="224" height="126"></img>
+        <img src='./plot_data/1.jpg' width="224" height="126"></img>
+      </div>
+      {/*Global datas*/}
+      <div style={{ width:'50%', minWidth: '30rem', marginTop: "2rem",  align_self: 'center', padding:'2rem', background: 'white', borderRadius: '2rem'}}>
         <Tabs onChange={onChange} type="card" items={items}/>
-        {imgKey==1? co2Plot : imgKey==2 ? tempPlot:seaPlot}
+        <div style={{border: '2px #D0D0D0 solid'}}>
+          {imgKey==3? co2Plot : imgKey==2 ? tempPlot:seaPlot}
+        </div>
       </div>
     </div>
   );
