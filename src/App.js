@@ -22,6 +22,7 @@ import co2_mean from "./plot_data/co2_mean"
 import temp_x from "./plot_data/temp_x";
 import temp from "./plot_data/temp";
 import temp_mean from "./plot_data/temp_mean"
+import missi from "./plot_data/Missi"
 
 ChartJS.register(
   CategoryScale,
@@ -87,6 +88,8 @@ const data2 = {
   ],
 };
 // data of sea level
+const Missi_year = [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012];
+const Missi = [0.8746875, 0.7318571, 0.9424705, 1.0752439, 1.0126136, 1.04, 0.9739394, 0.7925, 1.1518792, 1.3045541, 1.3466935, 1.2368496, 1.1166752, 1.3170803]
 const data3 = {
   labels: GMSL_x,
   datasets: [
@@ -106,6 +109,15 @@ const data3 = {
       borderWidth: 1,
       fill: true, // 是否填滿色彩
     },
+    {
+      label: 'Mississippi river water level (cm)',
+      data: missi,
+      backgroundColor: 'rgba(162, 54, 54, 0.8)',
+      borderColor: 'rgba(162, 54, 54, 0.8)',
+      borderWidth: 4,
+      fill: true, // 是否填滿色彩
+    },
+    
   ],
 };
 
