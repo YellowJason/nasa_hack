@@ -150,13 +150,22 @@ function App() {
       {/*Global datas*/}
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>Global Climate data</h1>
-        <h1 className='intro'>The main factor that causes Mississippi River Delta lossing is "Sea Level Rising", 
-        so we collect some others climate data from NASA. Try to find out the relation between the Delta and the Earth</h1>
+        <h1 className='intro'>Many pepele suggest that the main factor causing Mississippi River Delta lossing is "Sea Level Rising", 
+        so we collect some others climate data from NASA. Try to find out the relation between the Delta and the Earth.</h1>
         <Tabs onChange={onChange} type="card" items={items}/>
         <div style={{border: '2px #D0D0D0 solid'}}>
           {imgKey==3? co2Plot : imgKey==2 ? tempPlot:seaPlot}
         </div>
         <a className="App-link" href="https://climate.nasa.gov/vital-signs/carbon-dioxide/" target="_blank" rel="noopener noreferrer">Learn more on NASA vital signs website</a>
+      </div>
+      <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
+        <h1 className='block_title'>Did you find something ?</h1>
+        <h1 className='intro'>As you can see from above plot, Mississippi water level is highly corelated to sea level.
+        Furthermore, it's more sensitive. Few mm of sea level rising will cause 10x rising in Mississippi water level, thus causing huge land lossing.</h1>
+      </div>
+      <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
+        <h1 className='block_title'>How can we do</h1>
+        <h1 className='intro'>Ongoing...</h1>
       </div>
     </div>
   );
