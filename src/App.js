@@ -166,6 +166,7 @@ function App() {
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>How can we do</h1>
         <h1 className='intro'>Ongoing...</h1>
+        <img src='https://github.com/YellowJason/nasa_hack/raw/main/nasa_data/regression.jpg' style={{width: '60%', margin: '0% 20%'}}></img>
       </div>
     </div>
   );
