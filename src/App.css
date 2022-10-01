@@ -13,11 +13,11 @@
 }
 
 .intro {
-  line-height: 2rem;
-  font-size: 1.6rem;
+  line-height: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 100;
   text-align: left;
-  color: rgba(0, 50, 0, 0.5);
+  color: rgba(50, 50, 50, 0.8);
   margin: 0.25rem;
   padding: 0;
 }
