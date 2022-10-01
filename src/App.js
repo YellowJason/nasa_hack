@@ -160,7 +160,7 @@ function App() {
       </div>
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>Did you find something ?</h1>
-        <h1 className='intro'>As you can see from above plot, Mississippi water level is highly corelated to sea level.
+        <h1 className='intro_2'>As you can see from above plot, Mississippi water level is highly corelated to sea level.
         Furthermore, it's more sensitive. Few mm of sea level rising will cause 10x rising in Mississippi water level, thus causing huge land lossing.</h1>
       </div>
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
