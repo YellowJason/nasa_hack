@@ -47,7 +47,7 @@ const data1 = {
   labels: co2_x,
   datasets: [
     {
-      label: 'Gobal CO2 Concentration',
+      label: 'Gobal CO2 Concentration (ppm)',
       data: co2,
       backgroundColor: 'rgba(200, 200, 20, 0.3)',
       borderColor: 'rgba(200, 200, 20, 1)',
@@ -55,7 +55,7 @@ const data1 = {
       fill: true, // 是否填滿色彩
     },
     {
-      label: 'Annual Average',
+      label: 'Annual Average (ppm)',
       data: co2_mean,
       backgroundColor: 'rgba(54, 162, 54, 0.3)',
       borderColor: 'rgba(54, 162, 54, 1)',
@@ -91,7 +91,7 @@ const data3 = {
   labels: GMSL_x,
   datasets: [
     {
-      label: 'Gobal Mean Sea Level',
+      label: 'Gobal Mean Sea Level (mm)',
       data: GMSL,
       backgroundColor: 'rgba(54, 162, 235, 0.3)',
       borderColor: 'rgba(54, 162, 235, 1)',
@@ -99,7 +99,7 @@ const data3 = {
       fill: true, // 是否填滿色彩
     },
     {
-      label: 'Regression Line',
+      label: 'Regression Line (mm)',
       data: GMSL_reg,
       backgroundColor: 'rgba(54, 162, 54, 0.3)',
       borderColor: 'rgba(54, 162, 54, 1)',
@@ -131,6 +131,7 @@ function App() {
         <h1 className='block_title'>DELTA-X</h1>
         <h1 className='intro'>NASA</h1>
         <img src='https://github.com/YellowJason/nasa_hack/blob/main/src/plot_data/loss_gain.gif?raw=true' style={{width: '100%'}}></img>
+        <a className="App-link" href="https://deltax.jpl.nasa.gov/" target="_blank" rel="noopener noreferrer">Learn more on NASA Delta-X website</a>
       </div>
       {/*Global datas*/}
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
@@ -140,6 +141,7 @@ function App() {
         <div style={{border: '2px #D0D0D0 solid'}}>
           {imgKey==3? co2Plot : imgKey==2 ? tempPlot:seaPlot}
         </div>
+        <a className="App-link" href="https://climate.nasa.gov/vital-signs/carbon-dioxide/" target="_blank" rel="noopener noreferrer">Learn more on NASA vital signs website</a>
       </div>
     </div>
   );
