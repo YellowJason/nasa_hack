@@ -126,12 +126,16 @@ function App() {
 
   return (
     <div style={{width:'100%', padding:'2rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: '#D0D0D0'}}>
-      <div style={{ width:'50%', minWidth: '30rem', marginTop: "2rem",  align_self: 'center', padding:'2rem', background: 'white', borderRadius: '2rem'}}>
-        <img src='./plot_data/loss_gain.gif' width="224" height="126"></img>
-        <img src='./plot_data/1.jpg' width="224" height="126"></img>
+      {/*Delta-X datas*/}
+      <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
+        <h1 className='block_title'>DELTA-X</h1>
+        <h1 className='intro'>NASA</h1>
+        <img src='https://github.com/YellowJason/nasa_hack/blob/main/src/plot_data/loss_gain.gif?raw=true' style={{width: '100%'}}></img>
       </div>
       {/*Global datas*/}
-      <div style={{ width:'50%', minWidth: '30rem', marginTop: "2rem",  align_self: 'center', padding:'2rem', background: 'white', borderRadius: '2rem'}}>
+      <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
+        <h1 className='block_title'>Global Climate data</h1>
+        <h1 className='intro'>NASA</h1>
         <Tabs onChange={onChange} type="card" items={items}/>
         <div style={{border: '2px #D0D0D0 solid'}}>
           {imgKey==3? co2Plot : imgKey==2 ? tempPlot:seaPlot}
