@@ -47,7 +47,7 @@ const data1 = {
   labels: co2_x,
   datasets: [
     {
-      label: 'Gobal CO2 concentration',
+      label: 'Gobal CO2 Concentration',
       data: co2,
       backgroundColor: 'rgba(200, 200, 20, 0.3)',
       borderColor: 'rgba(200, 200, 20, 1)',
@@ -55,7 +55,7 @@ const data1 = {
       fill: true, // 是否填滿色彩
     },
     {
-      label: 'CO2 concentration (annual average)',
+      label: 'Annual Average',
       data: co2_mean,
       backgroundColor: 'rgba(54, 162, 54, 0.3)',
       borderColor: 'rgba(54, 162, 54, 1)',
@@ -91,7 +91,7 @@ const data3 = {
   labels: GMSL_x,
   datasets: [
     {
-      label: 'Gobal mean sea level',
+      label: 'Gobal Mean Sea Level',
       data: GMSL,
       backgroundColor: 'rgba(54, 162, 235, 0.3)',
       borderColor: 'rgba(54, 162, 235, 1)',
@@ -99,7 +99,7 @@ const data3 = {
       fill: true, // 是否填滿色彩
     },
     {
-      label: 'Regression line',
+      label: 'Regression Line',
       data: GMSL_reg,
       backgroundColor: 'rgba(54, 162, 54, 0.3)',
       borderColor: 'rgba(54, 162, 54, 1)',
@@ -125,8 +125,8 @@ function App() {
   ];
 
   return (
-    <div>
-      <div style={{ width: '40%', height: '40%', marginLeft: "30%", marginTop: "5rem"}}>
+    <div style={{width:'100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+      <div style={{ width:'50%', minWidth: '30rem', height: '40%', marginTop: "5rem",  align_self: 'center'}}>
         <Tabs onChange={onChange} type="card" items={items}/>
         {imgKey==1? co2Plot : imgKey==2 ? tempPlot:seaPlot}
       </div>
