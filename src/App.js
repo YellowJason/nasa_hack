@@ -213,6 +213,10 @@ function App() {
       </div>
       <div style={{height: '4rem', width: '100%'}}></div>
       <h1 className='intro'>Made by Nanchi318 @NASA Space Apps Challenge 2022</h1>
+      <div style={{width: '100%', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+      <a className="App-link" href="https://github.com/YellowJason/nasa_hack" target="_blank" rel="noopener noreferrer">View our code on Github</a>
+      </div>
+      
     </div>
   );
 }
