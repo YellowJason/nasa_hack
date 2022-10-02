@@ -172,8 +172,8 @@ function App() {
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>Global Climate data</h1>
         <h1 className='intro'>The main factor causing Mississippi River Delta lossing is "River Level Rising",
-        and many scientists suspect the real murderer is Global climate change.
-        So we collect some others global climate data from NASA. Try to find out the relation between the Delta and the Earth.</h1>
+        and many scientists suspect the real murderer behind is Global climate change.
+        So we collect some global climate datas from NASA. Trying to find out the relation between the Delta and the Earth.</h1>
         <Tabs onChange={onChange} type="card" items={items}/>
         <div style={{border: '2px #D0D0D0 solid'}}>
           {imgKey==3? co2Plot : imgKey==2 ? tempPlot:seaPlot}
