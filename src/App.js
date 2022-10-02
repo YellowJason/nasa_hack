@@ -191,7 +191,7 @@ function App() {
       </div>
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>What can we do</h1>
-        <h1 className='intro'>The carbon emission per capita now is ...</h1>
+        <h1 className='intro'>The CO2 emission per capita now is ...</h1>
         <p class='wow slideInUp' className='amp'>4.5 tonne/year</p>
         <h1 className='intro'>According to this speed, sea level will rise 1cm within next</h1>
         <p className='amp'>2.85 years</p>
