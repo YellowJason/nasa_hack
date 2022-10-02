@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nasa_hack/static/css/main.674be7d4.css",
-    "main.js": "/nasa_hack/static/js/main.d10bc657.js",
+    "main.js": "/nasa_hack/static/js/main.3242ac79.js",
     "static/js/787.b18786f1.chunk.js": "/nasa_hack/static/js/787.b18786f1.chunk.js",
     "index.html": "/nasa_hack/index.html",
     "main.674be7d4.css.map": "/nasa_hack/static/css/main.674be7d4.css.map",
-    "main.d10bc657.js.map": "/nasa_hack/static/js/main.d10bc657.js.map",
+    "main.3242ac79.js.map": "/nasa_hack/static/js/main.3242ac79.js.map",
     "787.b18786f1.chunk.js.map": "/nasa_hack/static/js/787.b18786f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.674be7d4.css",
-    "static/js/main.d10bc657.js"
+    "static/js/main.3242ac79.js"
   ]
 }
