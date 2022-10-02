@@ -166,7 +166,7 @@ function App() {
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>DELTA-X</h1>
         <h1 className='intro'>
-          The Delta-X mission is a NASA mission studying the Mississippi River Delta, which has suffered a massive land loss from mid 20 centry.
+          The Delta-X mission is a NASA mission studying the Mississippi River Delta, which has suffered a massive land loss from mid 20 century.
         </h1>
         <img src='https://github.com/YellowJason/nasa_hack/blob/main/src/plot_data/loss_gain.gif?raw=true' style={{width: '100%'}}></img>
         <a className="App-link" href="https://deltax.jpl.nasa.gov/" target="_blank" rel="noopener noreferrer">Learn more on NASA Delta-X website</a>
