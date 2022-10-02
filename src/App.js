@@ -201,7 +201,7 @@ function App() {
         <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', alignItems: 'center',}}>
           <h1 className='intro_3' style={{align_self: 'center'}}>Plants&nbsp;</h1>
           <InputNumber size="large" min={0} max={200} value={tree_r} onChange={onChange1}/>
-          <h1 className='intro_3' style={{align_self: 'center'}}>&nbsp;Trees and reduce car mileage&nbsp;</h1>
+          <h1 className='intro_3' style={{align_self: 'center'}}>&nbsp;Trees and reduces car mileage&nbsp;</h1>
           <InputNumber size="large" min={0} max={10000} value={car_r} onChange={onChange2}/>
           <h1 className='intro_3' style={{align_self: 'center'}}>&nbsp;km/year.</h1>
           <h1 className='intro_3' style={{align_self: 'center'}}>The global CO2 emission will decreased by {Math.round(reduction/co2_speed*10000)/100}%</h1>
