@@ -211,6 +211,8 @@ function App() {
         <h1 className='intro'>Thus the times when sea level rise next 1cm will extend to</h1>
         <p className='amp'>{Math.round(2.85*co2_speed/(co2_speed-reduction)*100)/100} years</p>
       </div>
+      <div style={{height: '4rem', width: '100%'}}></div>
+      <h1 className='intro'>Made by Nanchi318 @NASA Space Apps Challenge 2022</h1>
     </div>
   );
 }
