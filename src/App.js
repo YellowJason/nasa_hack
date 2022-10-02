@@ -159,6 +159,9 @@ function App() {
 
   return (
     <div style={{width:'100%', padding:'2rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: '#D0D0D0'}}>
+      <h1 className='ProjectName'>From Mississippi to the Earth</h1>
+      <h1 className='ProjectIntro'>- What do we learn from NASA Delta-X mission -</h1>
+      <a className="YT-link" href="https://www.youtube.com/watch?v=N6DNqbOZ3yM" target="_blank" rel="noopener noreferrer">Introduction video on youtube</a>
       {/*Delta-X datas*/}
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>DELTA-X</h1>

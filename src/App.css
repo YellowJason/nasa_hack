@@ -12,6 +12,28 @@
   padding: 0;
 }
 
+.ProjectName {
+  width: 60%;
+  line-height: 5rem;
+  font-size: 5rem;
+  font-weight: 100;
+  text-align: Center;
+  color: rgba(255,255,255, 1);
+  margin: 1rem;
+  padding: 0;
+}
+
+.ProjectIntro {
+  width: 60%;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: Center;
+  color: rgba(255,255,255, 1);
+  margin: 1rem;
+  padding: 0;
+}
+
 .intro {
   line-height: 2rem;
   font-size: 1.5rem;
@@ -65,4 +87,14 @@
 .App-link {
   color: #61b0fb;
   font-size: 1rem;
+}
+
+.YT-link {
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: Center;
+  color: rgba(255,255,255, 1);
+  margin: 0;
+  padding: 0;
 }
