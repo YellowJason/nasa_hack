@@ -1,7 +1,8 @@
 import './App.css';
 import "antd/dist/antd.css";
 import React, { useEffect, useState, useRef } from "react";
-import { Tabs } from "antd";
+import 'animate.css';
+import { Tabs, InputNumber} from "antd";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -121,12 +122,32 @@ const data3 = {
   ],
 };
 
+
 function App() {
   const [imgKey, setImgKey] = useState(1);
+  // CO2 reduction num
+  const [tree_r, setTree_r] = useState(10);
+  const [car_r, setCar_r] = useState(1000);
+  const [reduction, setReduction] = useState(267);
+  const co2_speed = 4500;
+  const tree = 12;
+  const car = 0.147;
+
   const onChange = (key) => {
     setImgKey(key);
     console.log(imgKey);
   };
+  const onChange1 = (value) => {
+    setTree_r(value);
+    setReduction(tree*value + car*car_r);
+    console.log(reduction);
+  };
+  const onChange2 = (value) => {
+    setCar_r(value);
+    setReduction(tree*tree_r + car*value);
+    console.log(reduction);
+  };
+
   const co2Plot = (<Line options={options} data={data1}/>);
   const tempPlot = (<Line options={options} data={data2}/>);
   const seaPlot = (<Line options={options} data={data3}/>);
@@ -150,8 +171,9 @@ function App() {
       {/*Global datas*/}
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>Global Climate data</h1>
-        <h1 className='intro'>Many pepele suggest that the main factor causing Mississippi River Delta lossing is "Sea Level Rising", 
-        so we collect some others climate data from NASA. Try to find out the relation between the Delta and the Earth.</h1>
+        <h1 className='intro'>The main factor causing Mississippi River Delta lossing is "River Level Rising",
+        and many scientists suspect the real murderer is Global climate change.
+        So we collect some others global climate data from NASA. Try to find out the relation between the Delta and the Earth.</h1>
         <Tabs onChange={onChange} type="card" items={items}/>
         <div style={{border: '2px #D0D0D0 solid'}}>
           {imgKey==3? co2Plot : imgKey==2 ? tempPlot:seaPlot}
@@ -160,13 +182,34 @@ function App() {
       </div>
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>Did you find something ?</h1>
-        <h1 className='intro_2'>As you can see from above plot, Mississippi water level is highly corelated to sea level.
-        Furthermore, it's more sensitive. Few mm of sea level rising will cause 10x rising in Mississippi water level, thus causing huge land lossing.</h1>
+        <h1 className='intro_2'>As you can see from above plot, Mississippi water level is following sea level as suspection.
+        Furthermore, it's very sensitive. Few mm of sea level rising will cause 10x rising in Mississippi water level, thus causing huge land lossing.
+        So to save Mississippi Delta, save the sea level first is the most important thing.</h1>
+        <img src='https://github.com/YellowJason/nasa_hack/raw/main/nasa_data/regression.jpg' style={{width: '60%', margin: '0% 20%'}}></img>
+        <h1 className='intro_2'>We further study the relationship of Sea Level and CO2 concentration, find out those two data are highly related.
+        So we make a bold assumption that reduce CO2 emission can truely slow down sea level rising</h1>
       </div>
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>How can we do</h1>
-        <h1 className='intro'>Ongoing...</h1>
-        <img src='https://github.com/YellowJason/nasa_hack/raw/main/nasa_data/regression.jpg' style={{width: '60%', margin: '0% 20%'}}></img>
+        <h1 className='intro'>The carbon emission per capita now is ...</h1>
+        <p class='wow slideInUp' className='amp'>4.5 tonne/year</p>
+        <h1 className='intro'>According to this speed, sea level will rise next 1cm within</h1>
+        <p className='amp'>2.85 years</p>
+        <h1 className='intro'>Only every humans on this planet work together can save this situation.</h1>
+        <h1 className='intro'>If everyone ...</h1>
+        <div style={{height: '2rem', width: '100%'}}></div>
+        <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', alignItems: 'center',}}>
+          <h1 className='intro_3' style={{align_self: 'center'}}>Plant&nbsp;</h1>
+          <InputNumber size="large" min={0} max={200} value={tree_r} onChange={onChange1} />
+          <h1 className='intro_3' style={{align_self: 'center'}}>&nbsp;Trees. Reduce car driving&nbsp;</h1>
+          <InputNumber size="large" min={0} max={10000} value={car_r} onChange={onChange2} />
+          <h1 className='intro_3' style={{align_self: 'center'}}>&nbsp;km/year.</h1>
+          <h1 className='intro_3' style={{align_self: 'center'}}>We can reduce {Math.round(reduction/co2_speed*10000)/100}% CO2 emission</h1>
+          <h1 className='intro_4'>*Estimate by : Trees absorb CO2 12kg/year, Cars emit CO2 0.147kg/km</h1>
+        </div>
+        <div style={{height: '2rem', width: '100%'}}></div>
+        <h1 className='intro'>Thus the times when sea level rise next 1cm will extend to</h1>
+        <p className='amp'>{Math.round(2.85*co2_speed/(co2_speed-reduction)*100)/100} years</p>
       </div>
     </div>
   );
