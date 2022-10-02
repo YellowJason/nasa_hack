@@ -182,33 +182,33 @@ function App() {
       </div>
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
         <h1 className='block_title'>Did you find something ?</h1>
-        <h1 className='intro_2'>As you can see from above plot, Mississippi water level is following sea level as suspection.
+        <h1 className='intro_2'>As you can see from above plot, Mississippi water level was following sea level as suspection.
         Furthermore, it's very sensitive. Few mm of sea level rising will cause 10x rising in Mississippi water level, thus causing huge land lossing.
-        So to save Mississippi Delta, save the sea level first is the most important thing.</h1>
+        So in order to save Mississippi Delta, we need to save the sea level first.</h1>
         <img src='https://github.com/YellowJason/nasa_hack/raw/main/nasa_data/regression.jpg' style={{width: '60%', margin: '0% 20%'}}></img>
         <h1 className='intro_2'>We further study the relationship of Sea Level and CO2 concentration, find out those two data are highly related.
-        So we make a bold assumption that reduce CO2 emission can truely slow down sea level rising</h1>
+        So we make a bold assumption that reduce CO2 emission can slow down sea level rising to a certain degree</h1>
       </div>
       <div style={{ width:'60%', minWidth: '30rem', marginTop: "3rem",  align_self: 'center', padding:'3rem 4rem', background: 'white', borderRadius: '2rem'}}>
-        <h1 className='block_title'>How can we do</h1>
+        <h1 className='block_title'>What can we do</h1>
         <h1 className='intro'>The carbon emission per capita now is ...</h1>
         <p class='wow slideInUp' className='amp'>4.5 tonne/year</p>
-        <h1 className='intro'>According to this speed, sea level will rise next 1cm within</h1>
+        <h1 className='intro'>According to this speed, sea level will rise 1cm within next</h1>
         <p className='amp'>2.85 years</p>
-        <h1 className='intro'>Only every humans on this planet work together can save this situation.</h1>
+        <h1 className='intro'>Everyone on the planet working together is the only way to  save this severe situation.</h1>
         <h1 className='intro'>If everyone ...</h1>
         <div style={{height: '2rem', width: '100%'}}></div>
         <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', alignItems: 'center',}}>
-          <h1 className='intro_3' style={{align_self: 'center'}}>Plant&nbsp;</h1>
-          <InputNumber size="large" min={0} max={200} value={tree_r} onChange={onChange1} />
-          <h1 className='intro_3' style={{align_self: 'center'}}>&nbsp;Trees. Reduce car driving&nbsp;</h1>
-          <InputNumber size="large" min={0} max={10000} value={car_r} onChange={onChange2} />
+          <h1 className='intro_3' style={{align_self: 'center'}}>Plants&nbsp;</h1>
+          <InputNumber size="large" min={0} max={200} value={tree_r} onChange={onChange1}/>
+          <h1 className='intro_3' style={{align_self: 'center'}}>&nbsp;Trees and reduce car mileage&nbsp;</h1>
+          <InputNumber size="large" min={0} max={10000} value={car_r} onChange={onChange2}/>
           <h1 className='intro_3' style={{align_self: 'center'}}>&nbsp;km/year.</h1>
-          <h1 className='intro_3' style={{align_self: 'center'}}>We can reduce {Math.round(reduction/co2_speed*10000)/100}% CO2 emission</h1>
-          <h1 className='intro_4'>*Estimate by : Trees absorb CO2 12kg/year, Cars emit CO2 0.147kg/km</h1>
+          <h1 className='intro_3' style={{align_self: 'center'}}>The global CO2 emission will decreased by {Math.round(reduction/co2_speed*10000)/100}%</h1>
+          <h1 className='intro_4'>*Estimate by : Tree absorbs CO2 12kg/year, Car emits CO2 0.147kg/km</h1>
         </div>
         <div style={{height: '2rem', width: '100%'}}></div>
-        <h1 className='intro'>Thus the times when sea level rise next 1cm will extend to</h1>
+        <h1 className='intro'>And the time it takes for sea level to rise 1cm will be extended to</h1>
         <p className='amp'>{Math.round(2.85*co2_speed/(co2_speed-reduction)*100)/100} years</p>
       </div>
       <div style={{height: '4rem', width: '100%'}}></div>
